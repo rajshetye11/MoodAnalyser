@@ -11,8 +11,8 @@ public class MoodAnalyserTest {
 	//UC1
 	@Test
 	public void mood_Whenhappy_ReturnHappy() {
-		MoodAnalyser moodAnalyser =new MoodAnalyser();
-		String mood=moodAnalyser.analyseMood("This is a happy mood");
+		MoodAnalyser moodAnalyser =new MoodAnalyser("This is a happy mood");
+		String mood=moodAnalyser.analyseMood();
 		assertEquals("happy",mood);
 	}
 
@@ -20,16 +20,16 @@ public class MoodAnalyserTest {
 	//TC1
 	@Test
 	public void mood_WhenSad_ReturnSad() {
-		MoodAnalyser moodAnalyser =new MoodAnalyser();
-		String mood=moodAnalyser.analyseMood("This is a sad mood");
+		MoodAnalyser moodAnalyser =new MoodAnalyser("This is a sad mood");
+		String mood=moodAnalyser.analyseMood();
 		assertEquals("sad",mood);
 	}
 	
 	//TC2
 	@Test
 	public void mood_WhenAnyMood_ReturnHappy() {
-		MoodAnalyser moodAnalyser =new MoodAnalyser();
-		String mood=moodAnalyser.analyseMood("This is any mood");
+		MoodAnalyser moodAnalyser =new MoodAnalyser("This is any mood");
+		String mood=moodAnalyser.analyseMood();
 		assertEquals("happy",mood);
 	}
 }
